@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+stdxstats.so
+stdxstats.dylib
+stdxstats.dll
+stdxstats.a
+stdxstats.lib
+stdxstats-test-*
+*.exe
+*.o
+*.a
+*.obj
+*.lst
+*.sublime-*

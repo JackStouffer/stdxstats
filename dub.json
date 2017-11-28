@@ -1,0 +1,8 @@
+{
+	"name": "stdxstats",
+	"authors": ["Jack Stouffer"],
+	"description": "Stats proposal for Phobos",
+	"copyright": "Copyright © 2017, Jack Stouffer",
+	"license": "Boost Software License - Version 1.0",
+    "targetType": "library"
+}
