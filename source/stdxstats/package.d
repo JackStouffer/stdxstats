@@ -1,5 +1,12 @@
 /**
  * This module provides simple range-based statistics functions.
+ *
+ * Currently Implemented:
+ * $(UL
+ *     $(LI mean)
+ *     $(LI variance)
+ *     $(LI standard deviation)
+ * )
  */
 module stdxstats;
 
@@ -44,7 +51,7 @@ if (isInputRange!R &&
     // division per element is slower, but more accurate
     for (; !r.empty; r.popFront())
     {
-        T delta = r.front - meanRes;
+        const T delta = r.front - meanRes;
         meanRes += delta / i++;
     }
 
@@ -207,7 +214,7 @@ private T varianceImpl(R, T)(auto ref R r, ref T mean, ref T var, bool populatio
     // Welford’s method for single pass variance
     foreach (e; r)
     {
-        Unqual!T oldMean = mean;
+        const T oldMean = mean;
         mean = mean + (e - mean) / i++;
         var = var + (e - mean) * (e - oldMean);
     }
